@@ -1,25 +1,28 @@
-let replaceAt = function(string, index, character) {
-    return string.substr(0, index) + character + string.substr(index + character.length);
-  }
-  
-  let removeDuplicates = function(str) {
-    let writeIndex = 0;
-  
-    for (let i = 0; i < str.length; i++) {
-      let found = false;
-  
-      for (let j = 0; j < writeIndex; j++) {
-        if (str[i] === str[j]) {
-          found = true;
-          break;
-        }
-      }
-  
-      if (!found) {
-        str = replaceAt(str, writeIndex, str[i]);
-        writeIndex++;
+let replaceAt = function (string, index, character) {
+  return (
+    string.substr(0, index) +
+    character +
+    string.substr(index + character.length)
+  );
+};
+
+let removeDuplicates = function (str) {
+  let writeIndex = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    let found = false;
+
+    for (let j = 0; j < writeIndex; j++) {
+      if (str[i] === str[j]) {
+        found = true;
+        break;
       }
     }
-    return str.substr(0, writeIndex);
-  };
-  
+
+    if (!found) {
+      str = replaceAt(str, writeIndex, str[i]);
+      writeIndex++;
+    }
+  }
+  return str.substr(0, writeIndex);
+};
