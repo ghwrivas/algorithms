@@ -19,7 +19,7 @@ Write a code to find the n^th Fibonacci number in the Fibonacci sequence.
    
    The memory complexity of this recursive solution is O(n) as each recursive call consumes memory on the stack.
 
-# Solution 2: iterativo 
+# Solution 2: iterative
  - Runtime complexity: The runtime complexity of this solution is linear, O(n).
 
  - Memory complexity: The runtime complexity of this solution is constant, O(1).
